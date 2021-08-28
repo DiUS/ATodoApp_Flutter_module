@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() => runApp(MyApp());
 
@@ -66,7 +67,9 @@ class _TodoFormState extends State<TodoForm> {
               FractionallySizedBox(
                 widthFactor: 1,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    SystemNavigator.pop();
+                  },
                   child: Text('Save'),
                 ),
               ),
